@@ -1,0 +1,22 @@
+{
+  "name": "projeto-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/guacirita/on25-IJS-ProjetoFinal.git"
+  },
+  "author": "jacira-sousa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guacirita/on25-IJS-ProjetoFinal/issues"
+  },
+  "homepage": "https://github.com/guacirita/on25-IJS-ProjetoFinal#readme",
+  "devDependencies": {
+    "jest": "^29.6.4"
+  }
+}
