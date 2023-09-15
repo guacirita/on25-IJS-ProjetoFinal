@@ -4,6 +4,8 @@ const { PlanoSororidade } = require("./PlanoSororidade.js");
 const { PlanoEmpoderada } = require("./PlanoEmpoderada.js");
 const { PlanoCamaradinha} = require("./PlanoCamaradinha.js");
 
+
+// Cliente
 const cliente = new Cliente;
 const plano = new Plano;
 
@@ -16,6 +18,9 @@ const cliente6 = new Cliente("Chimamanda Ngozi Adichie", 22019249022, plano);
 const cliente7 = new Cliente("Sueli Carneiro", 51061356000, plano);
 const cliente8 = new Cliente("Ana Maria Gonçalves", 10798782030, plano);
 
+
+console.log(cliente);
+
 console.log(cliente1);
 console.log(cliente2);
 console.log(cliente3);
@@ -25,7 +30,7 @@ console.log(cliente6);
 console.log(cliente7);
 console.log(cliente8);
 
-
+// Plano
 
 
 const plano1 = new Plano("cliente1", "Carolina Maria de Jesus", 3000);
@@ -49,7 +54,7 @@ console.log(plano7);
 console.log(plano8);
 
 
-
+// Plano Sororidade
 
 const planoSororidade1 = new PlanoSororidade("cliente5", "Alice Walker", 50000);
 planoSororidade1.criarPlano();
@@ -64,6 +69,9 @@ const planoSororidade3 = new PlanoSororidade("cliente8", "Ana Maria Gonçalves",
 planoSororidade3.criarPlano();
 console.log(planoSororidade3);
 
+
+// Plano Empoderada
+
 const planoEmpoderada1 = new PlanoEmpoderada("cliente3", "Conceição Evaristo", 15000);
 planoEmpoderada1.criarPlano();
 console.log(planoEmpoderada1);
@@ -76,16 +84,49 @@ const planoEmpoderada3 = new PlanoEmpoderada("cliente7", "Sueli Carneiro", 25000
 planoEmpoderada3.criarPlano();
 console.log(planoEmpoderada3);
 
+// Plano Camaradinha
+
 const planoCamaradinha1 = new PlanoCamaradinha("cliente1", "Carolina Maria de Jesus", 3000);
 planoCamaradinha1.criarPlano();
 console.log(planoCamaradinha1);
+
+planoCamaradinha1.delegarTarefasDomesticas();
+planoCamaradinha1.delegarTarefasDomesticas();
+planoCamaradinha1.delegarTarefasDomesticas();
+console.log(planoCamaradinha1);
+
+planoCamaradinha1.receberApoioTarefas();
+console.log(planoCamaradinha1);
+
+console.log(planoCamaradinha1.renda);
 
 const planoCamaradinha2 = new PlanoCamaradinha("cliente2", "Maria Firmina dos Reis", 3000);
 planoCamaradinha2.criarPlano();
 console.log(planoCamaradinha2);
 
+planoCamaradinha2.delegarTarefasDomesticas();
+planoCamaradinha2.delegarTarefasDomesticas();
+planoCamaradinha2.delegarTarefasDomesticas();
+planoCamaradinha2.delegarTarefasDomesticas();
+planoCamaradinha2.delegarTarefasDomesticas();
+planoCamaradinha2.delegarTarefasDomesticas();
+planoCamaradinha2.delegarTarefasDomesticas();
 
+planoCamaradinha2.totalHorasEconomizadas;
+planoCamaradinha2.dormir();
+planoCamaradinha2.fazerExercicios();
+planoCamaradinha2.ler();
+planoCamaradinha2.cuidarDaAutoestima();
+planoCamaradinha2.estudar();
+
+planoCamaradinha2.receberApoioTarefas();
+
+console.log(planoCamaradinha2);
+
+plano5.dormir();
+plano5.fazerExercicios();
+plano5.ler();
+plano5.cuidarDaAutoestima();
+plano5.estudar();
 
 console.log(PlanoCamaradinha);
-
-console.log(planoCamaradinha1.renda);

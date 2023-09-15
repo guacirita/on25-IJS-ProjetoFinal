@@ -12,7 +12,6 @@ class Cliente {
     this.#cpf = cpf;
     this.plano = plano;
 
-
     Cliente.listaDeClientes.push(this);
   }
 
