@@ -19,7 +19,6 @@ describe("Teste da classe Plano Camaradinha", () => {
     expect(planoCamaradinha).toBeInstanceOf(PlanoCamaradinha);
   });
 
-
   describe("criarPlano()", () => {
     it('cria um plano com sucesso se a renda for menor ou igual a 3000', () => {
       const planoCamaradinha1 = new PlanoCamaradinha("cliente1", "Carolina Maria de Jesus", 3000);

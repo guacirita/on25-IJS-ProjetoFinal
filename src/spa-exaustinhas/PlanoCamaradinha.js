@@ -26,7 +26,6 @@ class PlanoCamaradinha extends Plano {
   delegarTarefasDomesticas() {
     let qtdeHoras = 1;
     this.totalHorasEconomizadas += qtdeHoras;
-
     console.log(`${this.nome} você economizou ${qtdeHoras} horas`);
   }
 
@@ -50,7 +49,6 @@ class PlanoCamaradinha extends Plano {
     } else {
       console.log(`${this.nome} você não tem horas suficiente`);
     }
-
   }
 
   fazerExercicios() {
@@ -105,7 +103,6 @@ class PlanoCamaradinha extends Plano {
 
 
 module.exports = { PlanoCamaradinha };
-
 
 
 
