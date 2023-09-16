@@ -19,6 +19,7 @@ describe("Teste da classe Plano Camaradinha", () => {
     expect(planoCamaradinha).toBeInstanceOf(PlanoCamaradinha);
   });
 
+
   describe("criarPlano()", () => {
     it('cria um plano com sucesso se a renda for menor ou igual a 3000', () => {
       const planoCamaradinha1 = new PlanoCamaradinha("cliente1", "Carolina Maria de Jesus", 3000);
@@ -52,19 +53,94 @@ describe("Teste da classe Plano Camaradinha", () => {
 
     });
 
+    it("deve receber mensagem de erro por falta de horas no metodo receber apoio as tarefas", () => {
+      const planoCamaradinha1 = new PlanoCamaradinha("cliente1", "Carolina Maria de Jesus", 3000);
+      planoCamaradinha1.receberApoioTarefas();
+      expect(console.log)
+      .toHaveBeenCalledWith(`${planoCamaradinha1.nome} você não tem horas suficiente`);
   });
+    
+
+    it("deve diminuir a quantidade horas ao chamar o método dormir", () => {
+      const planoCamaradinha1 = new PlanoCamaradinha("cliente1", "Carolina Maria de Jesus", 3000);
+      planoCamaradinha1.delegarTarefasDomesticas();
+      planoCamaradinha1.delegarTarefasDomesticas();
+      planoCamaradinha1.dormir();
+      expect(planoCamaradinha1.totalHorasEconomizadas).toBe(1);
+    });
+
+    it("deve retornar erro devido a quantidade horas ao chamar o método dormir", () => {
+      const planoCamaradinha1 = new PlanoCamaradinha("cliente1", "Carolina Maria de Jesus", 3000);
+      planoCamaradinha1.dormir();
+      expect(console.log)
+        .toHaveBeenCalledWith(`${planoCamaradinha1.nome} você não tem horas suficiente`);
+    });
 
 
+    it("deve diminuir a quantidade horas ao chamar o método fazer Exercicios", () => {
+      const planoCamaradinha1 = new PlanoCamaradinha("cliente1", "Carolina Maria de Jesus", 3000);
+      planoCamaradinha1.delegarTarefasDomesticas();
+      planoCamaradinha1.delegarTarefasDomesticas();
+      planoCamaradinha1.fazerExercicios();
+      expect(planoCamaradinha1.totalHorasEconomizadas).toBe(1);
+    });
+
+    it("deve retornar erro devido a quantidade horas ao chamar o método  fazer exercícios", () => {
+      const planoCamaradinha1 = new PlanoCamaradinha("cliente1", "Carolina Maria de Jesus", 3000);
+      planoCamaradinha1.fazerExercicios();
+      expect(console.log)
+        .toHaveBeenCalledWith(`${planoCamaradinha1.nome} você não tem horas suficiente`);
+    });
+
+    it("deve diminuir a quantidade horas ao chamar o método ler", () => {
+      const planoCamaradinha1 = new PlanoCamaradinha("cliente1", "Carolina Maria de Jesus", 3000);
+      planoCamaradinha1.delegarTarefasDomesticas();
+      planoCamaradinha1.delegarTarefasDomesticas();
+      planoCamaradinha1.ler();
+      expect(planoCamaradinha1.totalHorasEconomizadas).toBe(1);
+    });
+
+    it("deve retornar erro devido a quantidade horas ao chamar o método ler", () => {
+      const planoCamaradinha1 = new PlanoCamaradinha("cliente1", "Carolina Maria de Jesus", 3000);
+      planoCamaradinha1.ler();
+      expect(console.log)
+        .toHaveBeenCalledWith(`${planoCamaradinha1.nome} você não tem horas suficiente`);
+    });
+
+    it("deve diminuir a quantidade horas ao chamar o método cuidar da Autoestima", () => {
+      const planoCamaradinha1 = new PlanoCamaradinha("cliente1", "Carolina Maria de Jesus", 3000);
+      planoCamaradinha1.delegarTarefasDomesticas();
+      planoCamaradinha1.delegarTarefasDomesticas();
+      planoCamaradinha1.cuidarDaAutoestima();
+      expect(planoCamaradinha1.totalHorasEconomizadas).toBe(1);
+
+    });
+
+    it("deve retornar erro devido a quantidade horas ao chamar o método cuidar da Autoestima", () => {
+      const planoCamaradinha1 = new PlanoCamaradinha("cliente1", "Carolina Maria de Jesus", 3000);
+      planoCamaradinha1.cuidarDaAutoestima();
+      expect(console.log)
+        .toHaveBeenCalledWith(`${planoCamaradinha1.nome} você não tem horas suficiente`);
+    });
+
+    it("deve diminuir a quantidade horas ao chamar o método  estudar", () => {
+      const planoCamaradinha1 = new PlanoCamaradinha("cliente1", "Carolina Maria de Jesus", 3000);
+      planoCamaradinha1.delegarTarefasDomesticas();
+      planoCamaradinha1.delegarTarefasDomesticas();
+      planoCamaradinha1.estudar();
+      expect(planoCamaradinha1.totalHorasEconomizadas).toBe(1);
+    });
+
+    it("deve retornar erro devido a quantidade horas ao chamar o método  estudar", () => {
+      const planoCamaradinha1 = new PlanoCamaradinha("cliente1", "Carolina Maria de Jesus", 3000);
+      planoCamaradinha1.estudar();
+      expect(console.log)
+        .toHaveBeenCalledWith(`${planoCamaradinha1.nome} você não tem horas suficiente`);
+    });
 
 
-
-
-
-
-
-
+  });
 });
-
 
 
 

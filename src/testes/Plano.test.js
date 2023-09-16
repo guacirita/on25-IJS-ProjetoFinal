@@ -1,6 +1,7 @@
 const { Cliente } = require("../spa-exaustinhas/Cliente.js");
 const { Plano } = require("../spa-exaustinhas/Plano.js");
 
+jest.spyOn(console, 'log').mockImplementation();
 
 describe("Teste da classe Plano", () => {
 
@@ -42,6 +43,34 @@ describe("Teste da classe Plano", () => {
   it("Verificar se o método criar plano o objeto retorna verdadeiro ", () => {
     expect(cliente instanceof Cliente).toBe(true);
     expect(plano instanceof Plano).toBe(true);
+  });
+
+  it("deve retornar mensagem ao chamar o método dormir", () => {
+    const plano3 = new Plano("cliente3", "Conceição Evaristo", 15000);
+    plano3.dormir();
+    expect(console.log)
+    .toHaveBeenCalledWith(`${plano3.nome} está dormindo`);
+  });
+
+  it("deve retornar mensagem ao chamar o método fazer Exercicios", () => {
+    const plano3 = new Plano("cliente3", "Conceição Evaristo", 15000);
+    plano3.fazerExercicios();
+    expect(console.log)
+    .toHaveBeenCalledWith(`${plano3.nome} está fazendo exercícios`);
+  });
+
+  it("deve retornar mensagem ao chamar o método ler", () => {
+    const plano3 = new Plano("cliente3", "Conceição Evaristo", 15000);
+    plano3.ler();
+    expect(console.log)
+    .toHaveBeenCalledWith(`${plano3.nome} está lendo`);
+  });
+
+  it("deve retornar mensagem ao chamar o método cuidar da Autoestima", () => {
+    const plano3 = new Plano("cliente3", "Conceição Evaristo", 15000);
+    plano3.cuidarDaAutoestima();
+    expect(console.log)
+    .toHaveBeenCalledWith(`${plano3.nome} está cuidando da autoestima`);
   });
 
 

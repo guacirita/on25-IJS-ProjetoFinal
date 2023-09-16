@@ -18,5 +18,8 @@
   "homepage": "https://github.com/guacirita/on25-IJS-ProjetoFinal#readme",
   "devDependencies": {
     "jest": "^29.6.4"
+  },
+  "dependencies": {
+    "coverage": "^0.4.1"
   }
 }
